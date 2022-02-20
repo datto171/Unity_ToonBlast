@@ -12,7 +12,7 @@ namespace Bejeweled
         Transform locationSpawn;
 
         [SerializeField]
-        int sizeMap = 64;
+        int sizeMap = 225;
 
         private void Awake()
         {

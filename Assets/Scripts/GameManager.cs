@@ -50,57 +50,30 @@ namespace Bejeweled
 
             for(int i = 0; i < cells.Length; i++)
             {
-                cells[i].SetPosX(i % 8);
-                cells[i].SetPosY(i / 8);
+                cells[i].SetPosX(i % 5);
+                cells[i].SetPosY(i / 5);
                 cells[i].SetIndex(i);
                 cells[i].SetTileSelected(false);
-                cells[i].SetTextPos(i % 8, i / 8);
+                cells[i].SetType(TileType.Normal);
+                //cells[i].SetTextPos(i % 8, i / 8);
 
                 // Random Setup Map
-                var k = Random.Range(1, 4);
-                switch (k)
-                {
-                    case 1:
-                        cells[i].SetType(TileType.Yellow);
-                        break;
-                    case 2:
-                        cells[i].SetType(TileType.Green);
-                        break;
-                    case 3:
-                        cells[i].SetType(TileType.Red);
-                        break;
-                    case 4:
-                        cells[i].SetType(TileType.Blue);
-                        break;
-                }
+                var k = Random.Range(1, 5);
+                cells[i].value = k;
+                cells[i].SetTextPos(k);
             }
-            cells[0].SetType(TileType.BoxBlue);
-            cells[1].SetType(TileType.RocketRow);
         }
 
         public TileComponent GetTile(int x, int y)
         {
-            if(x < 0 || y < 0 || x > 7 || y > 7)
+            if(x < 0 || y < 0 || x > 4 || y > 4)
             {
                 return null;
             }
             else
             {
-                return cells[y * 8 + x];
+                return cells[y * 5 + x];
             }
-        }
-
-        public void SetupMap()
-        {
-            //for (int i = 0; i < cells.Length; i++)
-            //{
-            //    cells[i].SetPosX(i % 8);
-            //    cells[i].SetPosY(i / 8);
-            //    cells[i].SetIndex(i);
-            //    cells[i].SetTileState(false);
-            //    cells[i].SetTextPos(i % 8, i / 8);
-            //    cells[i].SetType(TileType.TypeA);
-            //}
         }
     }
 }

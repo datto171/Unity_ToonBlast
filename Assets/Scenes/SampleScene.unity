@@ -259,7 +259,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 890, y: 890}
+  m_SizeDelta: {x: 560, y: 560}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129954794
 MonoBehaviour:
@@ -517,8 +517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridTile: {fileID: 129954792}
-  checkTileReady: 0
-  tileSelected: {fileID: 0}
 --- !u!114 &1890596120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +529,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390ee69f092e0744986fa14a11800a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileSelected: {fileID: 0}
+  listTileCheck: []
+  listClear: []
+  statusTile: 0
 --- !u!1 &1897035366
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 2004188850762793963, guid: 9aefb3103f25aba4b8039c3240848f5b, type: 3}
   locationSpawn: {fileID: 129954793}
-  sizeMap: 64
+  sizeMap: 25
 --- !u!4 &1897035368
 Transform:
   m_ObjectHideFlags: 0
